@@ -1,0 +1,157 @@
+commit 9e0e9fcdb7f677ace9d552b936c9f5d176b4ddb5
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:28:54 2020 +0200
+
+    Tehtiin muutoksia. Poistettiin file1.txt ja muokattiin file2.txt nimeksi file22.txt
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 64dae018d2fa430122bfbb2f4cb4df0714711b5b
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:26:08 2020 +0200
+
+    Nyt viimein lisättiin uusi kansio ja kolme tekstitiedostoa sinne
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d8880f7dedb7bdb6dc54e512309d020d79040255
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:25:18 2020 +0200
+
+    juuuh nyt alkaa suoritus
+
+ tiedostoja/file1.txt, | 0
+ tiedostoja/file2.txt, | 0
+ tiedostoja/file3.txt  | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 33a8b307b2462c0b14438bc6a62b98b667dd904a
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:19:58 2020 +0200
+
+    Luotiin uusi kansio ja kolme tiedostoa
+
+ tiedostoja/file1.txt, | 0
+ tiedostoja/file2.txt, | 0
+ tiedostoja/file3.txt  | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 88e5b49c88f472c6b63c8d50716b5e7a8f2ac6d1
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:19:04 2020 +0200
+
+    Poistettiin testikansio
+
+ tiedostoja/file1.txt, | 0
+ tiedostoja/file2.txt, | 0
+ tiedostoja/file3.txt  | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fa254469fd28c395b73ded74786efa3985635056
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:07:42 2020 +0200
+
+    Luotiin uusi kansio ja kolme tiedostoa
+
+ tiedostoja/file1.txt, | 0
+ tiedostoja/file2.txt, | 0
+ tiedostoja/file3.txt  | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b2353f2d899d7b21709980d0cd55650058351463
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 22:01:47 2020 +0200
+
+    Muokattiin eka.txt ja toka.txt
+
+ eka.txt  | 2 +-
+ toka.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit c0bf427f4e3d3910f0decb8993a169be4e6ce8aa
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:57:58 2020 +0200
+
+    Muutettiin tiedosto.txt nimeksi 'eka.txt'
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ec5169e8d78a077cc4e801b38dbf424dd14c6ca4
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:56:09 2020 +0200
+
+    Poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 10219b9f260f867041a2e0c5f1e3b5f744751a08
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:53:56 2020 +0200
+
+    Muutettiin uudestaan tiedosto.txt
+
+ tiedosto.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit b939fe24068aa3e11920894d72626a91968bafd9
+Author: matiasonnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:52:29 2020 +0200
+
+    Muutettiin tiedosto.txt
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 58dd5376f7b843e0b660848ad6cf61c115577b9e
+Author: Matias Onnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:46:40 2020 +0200
+
+    lisättiin uusi kansio ja tekstitiedosto
+
+ stuff/jeejee.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit eb801edacb5645e6c46a05e2a119648c28feff7b
+Author: Matias Onnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:45:35 2020 +0200
+
+    Muokattiin toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit fdfb74dca191a6970a444c3ae685362288376049
+Author: Matias Onnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:42:01 2020 +0200
+
+    lisättiin kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3227ecad24c35d3ab76ba0b537fb428fe14b6a36
+Author: Matias Onnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:39:56 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit cb8f226ee4f44f2c6496860972d64cc225f243f1
+Author: Matias Onnelainen <monnelainen@gmail.com>
+Date:   Mon Nov 2 21:35:20 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
