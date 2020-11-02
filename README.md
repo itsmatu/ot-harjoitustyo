@@ -4,3 +4,4 @@
 
 [komentorivi.txt](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
+Terve terve
