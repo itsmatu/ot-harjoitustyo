@@ -1,6 +1,3 @@
-Moikka moi
-
-
 commit 9e0e9fcdb7f677ace9d552b936c9f5d176b4ddb5
 Author: matiasonnelainen <monnelainen@gmail.com>
 Date:   Mon Nov 2 22:28:54 2020 +0200
