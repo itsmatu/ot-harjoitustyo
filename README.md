@@ -1,5 +1,5 @@
-**Terve vaan!**
+**Viikko 1**
 
-*Tässä on kursivoitua tekstiä.*
+[gitlog.txt](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-[Ja tässä on linkki githubiin.](https://github.com)
