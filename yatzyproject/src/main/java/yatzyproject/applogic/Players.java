@@ -34,4 +34,8 @@ public class Players {
         }
         return null;
     }
-}
+    
+    public int getPlayerCount() {
+        return this.player.size();
+    }
+ }

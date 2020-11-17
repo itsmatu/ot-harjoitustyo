@@ -1,1 +1,5 @@
 module-info.class
+yatzyproject/App.class
+yatzyproject/applogic/Players.class
+yatzyproject/applogic/ScoreCard.class
+yatzyproject/applogic/Dice.class

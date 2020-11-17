@@ -28,6 +28,7 @@ public class App extends Application {
         Button removePlayer = new Button("Remove player");
         removePlayer.setDisable(true);
         Button start = new Button("Start game");
+        start.setDisable(true);
         addPlayer.setDefaultButton(true);
 
         // DICES
@@ -118,6 +119,7 @@ public class App extends Application {
                 players.addPlayer(playername.getText());
                 playersAdded.getItems().add(playername.getText());
                 removePlayer.setDisable(false);
+                start.setDisable(false);
                 playername.clear();
             }
         });
@@ -127,6 +129,7 @@ public class App extends Application {
             players.removePlayer(remove);
             if (playersAdded.getItems().size() == 0) {
                 removePlayer.setDisable(true);
+                start.setDisable(true);
             }
         });
         start.setOnAction(event -> {

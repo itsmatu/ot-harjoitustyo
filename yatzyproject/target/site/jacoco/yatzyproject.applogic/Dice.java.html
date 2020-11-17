@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Dice.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">yatzyproject</a> &gt; <a href="index.source.html" class="el_package">yatzyproject.applogic</a> &gt; <span class="el_source">Dice.java</span></div><h1>Dice.java</h1><pre class="source lang-java linenums">package yatzyproject.applogic;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Dice {
+
+<span class="fc" id="L7">    private final int max = 6;</span>
+<span class="fc" id="L8">    private final int min = 1;</span>
+<span class="fc" id="L9">    private final int range = max - min + 1;</span>
+    private ArrayList&lt;Integer&gt; diceValues;
+    private ArrayList&lt;Integer&gt; selectedDices;
+    private int throwIndex;
+
+<span class="fc" id="L14">    public Dice() {</span>
+<span class="fc" id="L15">        this.diceValues = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L16">        this.selectedDices = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L17">    }</span>
+    
+    
+    public void roll() {
+<span class="fc" id="L21">        this.throwIndex++;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (this.throwIndex == 4) {</span>
+<span class="fc" id="L23">            this.throwIndex = 1;</span>
+        }
+        
+<span class="fc" id="L26">        this.diceValues.clear();</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (int i = 0; i &lt; 5; i++) {</span>
+<span class="fc" id="L28">            int rand = (int) (Math.random() * range) + min;</span>
+<span class="fc" id="L29">            this.diceValues.add(rand);</span>
+        }
+<span class="fc" id="L31">        Collections.sort(this.diceValues);</span>
+<span class="fc" id="L32">    }</span>
+    
+    public int setDiceValue(int diceorder) {
+<span class="nc" id="L35">        return this.diceValues.get(diceorder - 1);</span>
+    }
+    
+    public void addToSelectedDices(int dice) {
+<span class="nc" id="L39">        this.selectedDices.add(dice);</span>
+<span class="nc" id="L40">    }</span>
+    
+    public boolean diceIsSelected(int dice) {
+<span class="nc" id="L43">        return this.selectedDices.contains(dice);</span>
+    }
+    
+    public void clearSelectedDices() {
+<span class="nc" id="L47">        this.selectedDices.clear();</span>
+<span class="nc" id="L48">    }</span>
+    
+    public boolean wasLastRoll() {
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        return this.throwIndex == 3;</span>
+    }
+    
+    public int throwCount() {
+<span class="fc" id="L55">        return this.throwIndex;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

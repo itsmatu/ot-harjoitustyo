@@ -50,4 +50,12 @@ public class Dice {
     public boolean wasLastRoll() {
         return this.throwIndex == 3;
     }
+    
+    public int throwCount() {
+        return this.throwIndex;
+    }
+    
+    public int getDiceValuesSize() {
+        return this.diceValues.size();
+    }
 }

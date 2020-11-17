@@ -1,0 +1,4 @@
+--patch-module
+yatzyproject=_
+--add-reads
+yatzyproject=ALL-UNNAMED
