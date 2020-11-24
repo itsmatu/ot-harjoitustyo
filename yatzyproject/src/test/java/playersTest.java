@@ -1,5 +1,9 @@
-
-import yatzyproject.applogic.*;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import yatzyproject.applogic.Players;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -7,46 +11,32 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class yatzyprojectTest {
-
-    Dice dice;
+/**
+ *
+ * @author Matu
+ */
+public class playersTest {
+    
     Players player;
-
-    public yatzyprojectTest() {
+    
+    public playersTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
-        dice = new Dice();
-        player = new Players();
+        this.player = new Players();
     }
-
+    
     @After
     public void tearDown() {
-    }
-
-    @Test
-    public void throwCountIsLimitedToThree() {
-        dice.roll();
-        dice.roll();
-        dice.roll();
-        assertEquals(3, dice.throwCount());
-        dice.roll();
-        assertEquals(1, dice.throwCount());
-    }
-
-    @Test
-    public void rollGeneratesFiveValues() {
-        dice.roll();
-        assertEquals(5, dice.getDiceValuesSize());
     }
 
     @Test

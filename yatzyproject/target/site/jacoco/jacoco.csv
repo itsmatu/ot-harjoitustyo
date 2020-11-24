@@ -1,5 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-yatzyproject,yatzyproject.applogic,Dice,34,65,2,4,7,17,6,5,5,3
-yatzyproject,yatzyproject.applogic,Players,70,0,6,0,17,0,7,0,4,0
-yatzyproject,yatzyproject.applogic,ScoreCard,13,0,0,0,4,0,1,0,1,0
-yatzyproject,yatzyproject,App,420,0,16,0,96,0,20,0,12,0

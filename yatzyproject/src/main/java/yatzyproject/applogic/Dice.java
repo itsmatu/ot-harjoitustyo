@@ -9,11 +9,13 @@ public class Dice {
     private final int range = max - min + 1;
     private ArrayList<Integer> diceValues;
     private ArrayList<Integer> selectedDices;
+    private ArrayList<Integer> selectedDiceValues;
     private int throwIndex;
 
     public Dice() {
         this.diceValues = new ArrayList<>();
         this.selectedDices = new ArrayList<>();
+        this.selectedDiceValues = new ArrayList<>();
     }
     
     
@@ -35,8 +37,9 @@ public class Dice {
         return this.diceValues.get(diceorder - 1);
     }
     
-    public void addToSelectedDices(int dice) {
+    public void addToSelectedDices(int dice, int dicevalue) {
         this.selectedDices.add(dice);
+        this.selectedDiceValues.add(dicevalue);
     }
     
     public boolean diceIsSelected(int dice) {
@@ -45,6 +48,7 @@ public class Dice {
     
     public void clearSelectedDices() {
         this.selectedDices.clear();
+        this.selectedDiceValues.clear();
     }
     
     public boolean wasLastRoll() {
@@ -57,5 +61,19 @@ public class Dice {
     
     public int getDiceValuesSize() {
         return this.diceValues.size();
+    }
+    
+    public boolean containsValue(int value) {
+        return this.diceValues.contains(value);
+    }
+    
+    public int diceSum(int value) {
+        int sum = 0;
+        for (int i = 0; i < this.selectedDiceValues.size(); i++) {
+            if (value == this.selectedDiceValues.get(i)) {
+                sum += value;
+            }
+        }
+        return sum;
     }
 }
