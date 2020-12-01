@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import yatzyproject.applogic.Dice;
+import yatzy.applogic.Dice;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -1,5 +1,4 @@
-yatzyproject\applogic\Dice.class
-yatzyproject\applogic\Players.class
-module-info.class
-yatzyproject\App.class
-yatzyproject\applogic\ScoreCard.class
+yatzy/applogic/ScoreCard.class
+yatzy/applogic/Dice.class
+yatzy/applogic/Players.class
+yatzy/gui/App.class

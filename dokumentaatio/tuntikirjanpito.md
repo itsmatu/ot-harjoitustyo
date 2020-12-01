@@ -8,5 +8,7 @@
 
 24.11.2020 - 2 tuntia (Tehtiin muutamia pieniä korjauksia, jotka eivät toimineet. Esimerkiksi pelaajan vaihtaminen ei välillä onnistunut indeksiongelmasta johtuen.)
 
+30.11.2020 - 8 tuntia (Sain checkstylen toimimaan. Ongelman korjasi se, että tein suoraan xml-tiedoston sijaan tyhjän tiedoston minkä nimesin .xml päätteellä. Lisäsin toiminnallisuuden loppuihin tuloskortin yläosion kohtiin (ykköset,kakkoset jne) sekä lisäsin yhden parin merkkaamiseen toiminnon. Lisäsin myös pelaajan tuloksien yhteissumman tuloskortin alapuolelle. Paransin tapaa miten noppien arvoja luodaan. Paransin myös pakkauksien rakennetta.)
 
-Yhteensä 21 tuntia käytetty.
+
+Yhteensä 29 tuntia käytetty.

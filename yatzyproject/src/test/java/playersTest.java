@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import yatzyproject.applogic.Players;
+import yatzy.applogic.Players;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

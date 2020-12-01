@@ -1,5 +1,5 @@
 
-import yatzyproject.applogic.ScoreCard;
+import yatzy.applogic.ScoreCard;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
