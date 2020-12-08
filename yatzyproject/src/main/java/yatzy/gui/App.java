@@ -286,6 +286,62 @@ public class App extends Application {
                 onePairAdd.setDisable(true);
                 onePairValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("one pair")));
             }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("two pairs")) {
+                twoPairsValue.setText("-");
+                twoPairsAdd.setDisable(false);
+            } else {
+                twoPairsAdd.setDisable(true);
+                twoPairsValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("two pairs")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("three of a kind")) {
+                threeKindValue.setText("-");
+                threeKindAdd.setDisable(false);
+            } else {
+                threeKindAdd.setDisable(true);
+                threeKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("three of a kind")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("four of a kind")) {
+                fourKindValue.setText("-");
+                fourKindAdd.setDisable(false);
+            } else {
+                fourKindAdd.setDisable(true);
+                fourKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("four of a kind")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("small straight")) {
+                smallValue.setText("-");
+                smallAdd.setDisable(false);
+            } else {
+                smallAdd.setDisable(true);
+                smallValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("small straight")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("large straight")) {
+                largeValue.setText("-");
+                largeAdd.setDisable(false);
+            } else {
+                largeAdd.setDisable(true);
+                largeValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("large straight")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("full house")) {
+                fullValue.setText("-");
+                fullAdd.setDisable(false);
+            } else {
+                fullAdd.setDisable(true);
+                fullValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("full house")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("yatzy")) {
+                yatzyValue.setText("-");
+                yatzyAdd.setDisable(false);
+            } else {
+                yatzyAdd.setDisable(true);
+                yatzyValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("yatzy")));
+            }
+            if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("chance")) {
+                chanceValue.setText("-");
+                chanceAdd.setDisable(false);
+            } else {
+                chanceAdd.setDisable(true);
+                chanceValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("chance")));
+            }
         });
 
         // SCORECARD BUTTONS
@@ -331,10 +387,66 @@ public class App extends Application {
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
-        
+
         onePairAdd.setOnAction(event -> {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("one pair", dice.onePairSum());
             onePairValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("one pair")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        twoPairsAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("two pairs", dice.twoPairSum());
+            twoPairsValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("two pairs")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        threeKindAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("three of a kind", dice.threeOfAKindSum());
+            threeKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("three of a kind")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        fourKindAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("four of a kind", dice.fourOfAKindSum());
+            fourKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("four of a kind")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        smallAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("small straight", dice.straightSum());
+            smallValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("small straight")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        largeAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("large straight", dice.straightSum());
+            largeValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("large straight")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        fullAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("full house", dice.fullHouseSum());
+            fullValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("full house")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        chanceAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("chance", dice.addChance());
+            chanceValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("chance")));
+            roll.setDisable(true);
+            nextPlayerButton.setDisable(false);
+            dice.clearDiceValues();
+        });
+        yatzyAdd.setOnAction(event -> {
+            players.getPlayerScorecard(currentPlayer.getText()).addScore("yatzy", dice.addYatzy());
+            yatzyValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("yatzy")));
             roll.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();

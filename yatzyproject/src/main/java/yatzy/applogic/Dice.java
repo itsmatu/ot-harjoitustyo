@@ -166,4 +166,142 @@ public class Dice {
         }
         return sum;
     }
+
+    /**
+     * Method checks for the highest possible two pairs and sums them
+     * @return Returns an integer value
+     */
+    public int twoPairSum() {
+        ArrayList<Integer> helpingList = new ArrayList<>();
+        for (Integer value : this.diceValues.keySet()) {
+            helpingList.add(this.diceValues.get(value));
+        }
+        Collections.sort(helpingList);
+        int sum = 0;
+        int firstPair = 0;
+        for (int i = 0; i < 5; i++) {
+            for (int a = 0; a < 5; a++) {
+                if (a != i && helpingList.get(i) == helpingList.get(a) && helpingList.get(i) * 2 > firstPair) {
+                    firstPair = helpingList.get(i) * 2;
+                    sum += helpingList.get(i) * 2;
+                }
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Method checks for three same values from rolled dices and sums them
+     * @return Returns an integer value
+     */
+    public int threeOfAKindSum() {
+        int sum = 0;
+        int value = 0;
+        for (int i = 1; i < 6; i++) {
+            for (int a = 1; a < 6; a++) {
+                if (a != i && this.diceValues.get(i) == this.diceValues.get(a)) {
+                    value++;
+                }
+                if (value == 3) {
+                    return this.diceValues.get(i) * 3;
+                }
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Method checks for four same values from rolled dices and sums them
+     * @return Returns an integer value
+     */
+    public int fourOfAKindSum() {
+        int sum = 0;
+        int value = 0;
+        for (int i = 1; i < 6; i++) {
+            for (int a = 1; a < 6; a++) {
+                if (a != i && this.diceValues.get(i) == this.diceValues.get(a)) {
+                    value++;
+                }
+                if (value == 4) {
+                    return this.diceValues.get(i) * 4;
+                }
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Method checks wether a player has either a small straight (1,2,3,4,5) or a large straight (2,3,4,5,6)
+     * @return Returns an integer value
+     */
+    public int straightSum() {
+        ArrayList<Integer> helpingList = new ArrayList<>();
+        for (Integer value : this.diceValues.keySet()) {
+            helpingList.add(this.diceValues.get(value));
+        }
+        Collections.sort(helpingList);
+        int sum = 0;
+        if (helpingList.get(0) == 1
+                && helpingList.get(1) == 2
+                && helpingList.get(2) == 3
+                && helpingList.get(3) == 4
+                && helpingList.get(4) == 5) {
+            sum = 15;
+        } else if (helpingList.get(0) == 2
+                && helpingList.get(1) == 3
+                && helpingList.get(2) == 4
+                && helpingList.get(3) == 5
+                && helpingList.get(4) == 6) {
+            sum = 20;
+        }
+        return sum;
+    }
+
+    /**
+     * Method checks wether a player has a full house (For example 4,4,6,6,6)
+     * @return Returns an integer value
+     */
+    public int fullHouseSum() {
+        ArrayList<Integer> helpingList = new ArrayList<>();
+        for (Integer value : this.diceValues.keySet()) {
+            helpingList.add(this.diceValues.get(value));
+        }
+        Collections.sort(helpingList);
+        int sum = 0;
+        if (helpingList.get(0) == helpingList.get(1) && helpingList.get(1) == helpingList.get(2) && helpingList.get(3) == helpingList.get(4)) {
+            sum = (helpingList.get(0) * 3) + (helpingList.get(3) * 2);
+        } else if (helpingList.get(0) == helpingList.get(1) && helpingList.get(2) == helpingList.get(3) && helpingList.get(3) == helpingList.get(4)) {
+            sum = (helpingList.get(0) * 2) + (helpingList.get(3) * 3);
+        }
+        return sum;
+    }
+
+    /**
+     * Method checks wether a player has rolled 5 same values
+     * @return Returns an integer value
+     */
+    public int addYatzy() {
+        ArrayList<Integer> helpingList = new ArrayList<>();
+        for (Integer value : this.diceValues.keySet()) {
+            helpingList.add(this.diceValues.get(value));
+        }
+        Collections.sort(helpingList);
+        int sum = 0;
+        if (helpingList.get(0) == helpingList.get(1) && helpingList.get(0) == helpingList.get(2) && helpingList.get(0) == helpingList.get(3) && helpingList.get(0) == helpingList.get(4)) {
+            sum = 50;
+        }
+        return sum;
+    }
+
+    /**
+     * Method sums up all of the dices rolled
+     * @return Returns an integer value
+     */
+    public int addChance() {
+        int sum = 0;
+        for (int i = 1; i < 6; i++) {
+            sum += this.diceValues.get(i);
+        }
+        return sum;
+    }
 }
