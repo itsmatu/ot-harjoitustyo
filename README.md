@@ -38,7 +38,7 @@ mvn package
 
 # Dokumentaatio
 
-[Käyttöohje]((https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+[Käyttöohje](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 [Vaatimusmäärittely](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
