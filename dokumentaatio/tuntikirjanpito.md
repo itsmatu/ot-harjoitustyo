@@ -10,5 +10,6 @@
 
 30.11.2020 - 8 tuntia (Sain checkstylen toimimaan. Ongelman korjasi se, että tein suoraan xml-tiedoston sijaan tyhjän tiedoston minkä nimesin .xml päätteellä. Lisäsin toiminnallisuuden loppuihin tuloskortin yläosion kohtiin (ykköset,kakkoset jne) sekä lisäsin yhden parin merkkaamiseen toiminnon. Lisäsin myös pelaajan tuloksien yhteissumman tuloskortin alapuolelle. Paransin tapaa miten noppien arvoja luodaan. Paransin myös pakkauksien rakennetta.)
 
+8.12.2020 - 11 tuntia (Lisäsin loputkin tuloskortin toiminnot. Käytännössä peliä voidaan nyt pelata jo ilman mitään ongelmia. Lisäsin Useita testejä, sekä poistin käyttöliittymän rakentavan koodin testikattavuusraportista. JavaDoc lisätty.)
 
-Yhteensä 29 tuntia käytetty.
+Yhteensä 40 tuntia käytetty.
