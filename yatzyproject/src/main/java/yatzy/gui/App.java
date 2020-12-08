@@ -197,7 +197,6 @@ public class App extends Application {
             }
             dice.clearSelectedDices();
         });
-
         // GAME BUTTON ACTIONS
         dice1.setOnAction(event -> {
             dice.addToSelectedDices(1, Integer.valueOf(dice1.getText()));

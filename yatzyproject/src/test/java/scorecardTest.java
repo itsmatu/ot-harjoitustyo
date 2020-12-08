@@ -33,15 +33,29 @@ public class scorecardTest {
 
     @Test
     public void addScoreWorks() {
-        this.score.addScore("Full house", 30);
-        assertEquals(this.score.getScore("Full house"), 30);
+        score.addScore("Full house", 30);
+        assertEquals(score.getScore("Full house"), 30);
     }
     
     @Test
     public void checkingIfContainsScoreWorks() {
-        this.score.addScore("Full house", 30);
-        assertEquals(this.score.doesNotContainScore("Full house"), false);
-        assertEquals(this.score.doesNotContainScore("Yatzy"), true);
+        score.addScore("Full house", 30);
+        assertEquals(score.doesNotContainScore("Full house"), false);
+        assertEquals(score.doesNotContainScore("Yatzy"), true);
 
+    }
+    
+    @Test
+    public void getScoreWorks() {
+        score.addScore("one pair", 6);
+        assertEquals(score.getScore("one pair"), 6);
+    }
+    
+    @Test
+    public void getScoreSumWorks() {
+        score.addScore("one pair", 6);
+        score.addScore("yatzy", 50);
+        score.addScore("fours", 16);
+        assertEquals(score.getScoreSum(), 72);
     }
 }

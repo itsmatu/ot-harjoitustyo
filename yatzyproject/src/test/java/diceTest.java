@@ -44,14 +44,47 @@ public class diceTest {
         dice.roll();
         dice.roll();
         dice.roll();
-        assertEquals(3, dice.throwCount());
+        assertEquals(3, dice.rollCount());
         dice.roll();
-        assertEquals(1, dice.throwCount());
+        assertEquals(1, dice.rollCount());
     }
 
     @Test
     public void rollGeneratesFiveValues() {
         dice.roll();
         assertEquals(5, dice.getDiceValuesSize());
+    }
+    
+    @Test
+    public void addingToSelectedDicesWorks() {
+        dice.roll();
+        dice.addToSelectedDices(1, 1);
+        assertEquals(dice.diceIsSelected(1), true);
+    }
+    
+    @Test
+    public void clearSelectedDicesWorks() {
+        dice.roll();
+        dice.addToSelectedDices(1, 1);
+        assertEquals(dice.diceIsSelected(1), true);
+        dice.clearSelectedDices();
+        assertEquals(dice.diceIsSelected(1), false);
+    }
+    
+    @Test
+    public void checkingIfItWasLastRoll() {
+        dice.roll();
+        dice.roll();
+        assertEquals(dice.wasLastRoll(), false);
+        dice.roll();
+        assertEquals(dice.wasLastRoll(), true);
+    }
+    
+    @Test
+    public void clearDiceValuesWorks() {
+        dice.roll();
+        assertEquals(dice.getDiceValuesSize(), 5);
+        dice.clearDiceValues();
+        assertEquals(dice.getDiceValuesSize(), 0);
     }
 }

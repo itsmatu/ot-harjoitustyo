@@ -13,19 +13,34 @@ Jos yatzy ei ole ennestään tuttu peli, voit lukea sen säännöistä [täält�
 Sovellus aukeaa näkymään, jossa peliin osallistuvat pelaajat lisätään. Pelaajien lukumäärää ei ole rajoitettu. Pelaajia on myös
 mahdollista poistaa.
 
+- [x] Pelaajien lisääminen
+- [x] Pelaajien poistaminen
+ 
 ### Pelin pelaaminen
 
 Pelin aloittaessa näkymä muuttuu. Tässä näkymässä ikkunan vasemmalla puolella näkyy kenen vuoro on pelata ja lisäksi kyseisen pelaajan saavuttamat arvot hänen tuloskortissa.
 Ikkunan oikealla puolella on viisi noppaa vastaavaa nappulaa, joiden avulla pelaaja voi heittovuoroillaan lukita haluamiaan noppia.
 Noppien lisäksi on myös heittämiseen tarkoitettu nappula, jota painaessa lukitsemattomille nopille arvotaan satunnainen arvo 1-6 väliltä.
 
+- [x] Noppien heittäminen toimii
+- [x] Noppien lukitseminen toimii
+- [x] Pelaajan vuoron vaihtuminen ja heittomäärien rajoittaminen kolmeen tehty
+- [x] 
+
 ### Pelin päättyminen
 
 Peli päättyy kun kaikki pelaajat ovat täyttäneet oman tuloskorttinsa. Pelin voittajaksi julistetaan se pelaaja, jonka tuloskortin summa on korkein.
 Peli tarjoaa mahdollisuuden palata alkuun, jos halutaan lisätä tai poistaa pelaajia.
+
+- [x] Pelaajat voivat lisätä tuloksia tuloskorttiin
+- [ ] Pelin voittajan määrittäminen toimii
+- [ ] Peli tarjoaa mahdollisuuden palata alkuun
+
 
 ## Ideoita jatkokehitykseen
 
 * Noppien "animaatio". Nopan arvo vaihtelee nopeasti ennen sen lukitsemista yhdelle arvolle. Tämä voisi olla hauska lisä imitoimaan noppien pyörimistä.
 * Highscoret
 
+- [ ] Noppien animaatio tehty
+- [ ] Highscoret tehty
