@@ -214,10 +214,11 @@ public class Dice {
                     if (a != i && this.diceValues.get(i) == this.diceValues.get(a)) {
                         value++;
                     }
-                    if (value == 3) {
+                    if (value == 2) {
                         return this.diceValues.get(i) * 3;
                     }
                 }
+                value = 0;
             }
         } catch (Exception e) {
 
@@ -239,12 +240,11 @@ public class Dice {
                     if (a != i && this.diceValues.get(i) == this.diceValues.get(a)) {
                         value++;
                     }
-                    if (value == 4) {
+                    if (value == 3) {
                         return this.diceValues.get(i) * 4;
-                    } else {
-                        value = 0;
                     }
                 }
+                value = 0;
             }
         } catch (Exception e) {
 
