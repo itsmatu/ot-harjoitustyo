@@ -21,6 +21,13 @@ public class Dice {
     }
 
     /**
+     * Method is used only for testing purposes
+     */
+    public void addValues(int index, int value) {
+        this.diceValues.put(index, value);
+    }
+    
+    /**
      * Method generates five random values between 1-6
      *
      */
