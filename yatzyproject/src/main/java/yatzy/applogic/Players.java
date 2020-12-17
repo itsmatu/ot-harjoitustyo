@@ -70,6 +70,10 @@ public class Players {
     public ScoreCard getPlayerScorecard(String name) {
         return this.players.get(name);
     }
+    
+    public HashMap<String, ScoreCard> getPlayersMap() {
+        return this.players;
+    }
 
     /**
      * This method is used to move index variable forward by one
@@ -81,5 +85,10 @@ public class Players {
         } else {
             this.index++;
         }
+    }
+    
+    public void clearPlayers() {
+        this.players.clear();
+        this.index = 0;
     }
 }

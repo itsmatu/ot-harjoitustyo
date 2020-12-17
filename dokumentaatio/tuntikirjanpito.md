@@ -12,4 +12,6 @@
 
 8.12.2020 - 11 tuntia (Lisäsin loputkin tuloskortin toiminnot. Käytännössä peliä voidaan nyt pelata jo ilman mitään ongelmia. Lisäsin Useita testejä, sekä poistin käyttöliittymän rakentavan koodin testikattavuusraportista. JavaDoc lisätty.)
 
-Yhteensä 40 tuntia käytetty.
+14.12.2020 - 7 tuntia (Lisäsin sovellukseen uuden näkymän pelin päättymiselle ja korjasin sovelluksessa olleita bugeja.)
+
+Yhteensä 47 tuntia käytetty.

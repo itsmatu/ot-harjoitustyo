@@ -87,6 +87,8 @@ public class App extends Application {
         Button sixesAdd = new Button("add");
         sixesAdd.setDisable(false);
         HBox sixesContents = new HBox(sixesAdd, sixes, sixesValue);
+        // BONUS
+        Label bonus = new Label("Bonus: -");
 
         // LOWER SECTION
         // ONE PAIR
@@ -158,16 +160,22 @@ public class App extends Application {
         HBox scoreAndSum = new HBox(scoreLabel, scoreSumLabel);
         HBox dices = new HBox(dice1, dice2, dice3, dice4, dice5, roll);
         VBox dicesAndPlayername = new VBox(currentPlayer, dices, nextPlayerButton);
-        VBox scorecardContents = new VBox(onesContents, twosContents, threesContents, foursContents, fivesContents, sixesContents,
+        VBox scorecardContents = new VBox(onesContents, twosContents, threesContents, foursContents, fivesContents, sixesContents, bonus,
                 onePairContents, twoPairsContents, threeKindContents,
                 fourKindContents, smallContents, largeContents, fullContents, chanceContents, yatzyContents, scoreAndSum);
         BorderPane gameWindow = new BorderPane();
         gameWindow.setLeft(scorecardContents);
         gameWindow.setRight(dicesAndPlayername);
 
+        // GAME AFTERMATH WINDOW
+        ListView<String> playersResults = new ListView();
+        Button restartGame = new Button("Restart game");
+        VBox listAndResetButton = new VBox(playersResults, restartGame);
+
         // SCENES
         Scene addPlayers = new Scene(playerCreation, 500, 400);
-        Scene game = new Scene(gameWindow, 500, 400);
+        Scene game = new Scene(gameWindow, 500, 425);
+        Scene gameAftermath = new Scene(listAndResetButton, 500, 400);
 
         // ROLL BUTTON ON ACTIONS
         roll.setOnAction(event -> {
@@ -221,6 +229,12 @@ public class App extends Application {
         nextPlayerButton.setOnAction(event -> {
             players.nextPlayer();
             currentPlayer.setText(players.getCurrentPlayer());
+            if (players.getPlayerScorecard(players.getCurrentPlayer()).scorecardIsFull()) {
+                stage.setScene(gameAftermath);
+                for (String name : players.getPlayersMap().keySet()) {
+                    playersResults.getItems().add(name + " = " + players.getPlayerScorecard(name).getScoreSum());
+                }
+            }
             dice1.setDisable(true);
             dice2.setDisable(true);
             dice3.setDisable(true);
@@ -237,6 +251,12 @@ public class App extends Application {
             scoreSumLabel.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScoreSum()));
 
             nextPlayerButton.setDisable(true);
+            if (players.getPlayerScorecard(players.getCurrentPlayer()).bonusAwarded()) {
+                bonus.setText("Bonus: 50");
+                players.getPlayerScorecard(players.getCurrentPlayer()).addScore("bonus", 50);
+            } else {
+                bonus.setText("Bonus: -");
+            }
             if (players.getPlayerScorecard(currentPlayer.getText()).doesNotContainScore("ones")) {
                 onesValue.setText("-");
                 onesAdd.setDisable(false);
@@ -349,6 +369,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("ones", dice.diceSum(1));
             onesValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("ones")));
             roll.setDisable(true);
+            onesAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -356,6 +377,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("twos", dice.diceSum(2));
             twosValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("twos")));
             roll.setDisable(true);
+            twosAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -363,6 +385,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("threes", dice.diceSum(3));
             threesValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("threes")));
             roll.setDisable(true);
+            threesAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -370,6 +393,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("fours", dice.diceSum(4));
             foursValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("fours")));
             roll.setDisable(true);
+            foursAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -377,6 +401,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("fives", dice.diceSum(5));
             fivesValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("fives")));
             roll.setDisable(true);
+            fivesAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -384,6 +409,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("sixes", dice.diceSum(6));
             sixesValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("sixes")));
             roll.setDisable(true);
+            sixesAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -392,6 +418,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("one pair", dice.onePairSum());
             onePairValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("one pair")));
             roll.setDisable(true);
+            onePairAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -399,6 +426,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("two pairs", dice.twoPairSum());
             twoPairsValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("two pairs")));
             roll.setDisable(true);
+            twoPairsAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -406,6 +434,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("three of a kind", dice.threeOfAKindSum());
             threeKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("three of a kind")));
             roll.setDisable(true);
+            threeKindAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -413,6 +442,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("four of a kind", dice.fourOfAKindSum());
             fourKindValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("four of a kind")));
             roll.setDisable(true);
+            fourKindAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -420,6 +450,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("small straight", dice.straightSum());
             smallValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("small straight")));
             roll.setDisable(true);
+            smallAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -427,6 +458,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("large straight", dice.straightSum());
             largeValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("large straight")));
             roll.setDisable(true);
+            largeAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -434,6 +466,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("full house", dice.fullHouseSum());
             fullValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("full house")));
             roll.setDisable(true);
+            fullAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -441,6 +474,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("chance", dice.addChance());
             chanceValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("chance")));
             roll.setDisable(true);
+            chanceAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -448,6 +482,7 @@ public class App extends Application {
             players.getPlayerScorecard(currentPlayer.getText()).addScore("yatzy", dice.addYatzy());
             yatzyValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("yatzy")));
             roll.setDisable(true);
+            yatzyAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
             dice.clearDiceValues();
         });
@@ -474,8 +509,47 @@ public class App extends Application {
             currentPlayer.setText(players.getCurrentPlayer());
             stage.setScene(game);
         });
+        restartGame.setOnAction(event -> {
+            players.clearPlayers();
+            stage.setScene(addPlayers);
+            playersAdded.getItems().clear();
+            removePlayer.setDisable(true);
+            start.setDisable(true);
+            bonus.setText("Bonus: -");
+            onesValue.setText("-");
+            onesAdd.setDisable(false);
+            twosValue.setText("-");
+            twosAdd.setDisable(false);
+            threesValue.setText("-");
+            threesAdd.setDisable(false);
+            foursValue.setText("-");
+            foursAdd.setDisable(false);
+            fivesValue.setText("-");
+            fivesAdd.setDisable(false);
+            sixesValue.setText("-");
+            sixesAdd.setDisable(false);
+            onePairValue.setText("-");
+            onePairAdd.setDisable(false);
+            twoPairsValue.setText("-");
+            twoPairsAdd.setDisable(false);
+            threeKindValue.setText("-");
+            threeKindAdd.setDisable(false);
+            fourKindValue.setText("-");
+            fourKindAdd.setDisable(false);
+            smallValue.setText("-");
+            smallAdd.setDisable(false);
+            largeValue.setText("-");
+            largeAdd.setDisable(false);
+            fullValue.setText("-");
+            fullAdd.setDisable(false);
+            chanceValue.setText("-");
+            chanceAdd.setDisable(false);
+            yatzyValue.setText("-");
+            yatzyAdd.setDisable(false);
+        });
 
         stage.setResizable(false);
+        stage.setTitle("Yatzy");
         stage.setScene(addPlayers);
         stage.show();
     }

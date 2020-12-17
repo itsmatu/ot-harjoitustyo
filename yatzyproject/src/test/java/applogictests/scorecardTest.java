@@ -1,3 +1,5 @@
+package applogictests;
+
 
 import yatzy.applogic.ScoreCard;
 import org.junit.After;
