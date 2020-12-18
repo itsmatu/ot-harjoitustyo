@@ -24,8 +24,7 @@ Noppien lisäksi on myös heittämiseen tarkoitettu nappula, jota painaessa luki
 
 - [x] Noppien heittäminen toimii
 - [x] Noppien lukitseminen toimii
-- [x] Pelaajan vuoron vaihtuminen ja heittomäärien rajoittaminen kolmeen tehty
-- [x] 
+- [x] Pelaajan vuoron vaihtuminen ja heittomäärien rajoittaminen kolmeen tehty 
 
 ### Pelin päättyminen
 
@@ -33,8 +32,8 @@ Peli päättyy kun kaikki pelaajat ovat täyttäneet oman tuloskorttinsa. Pelin 
 Peli tarjoaa mahdollisuuden palata alkuun, jos halutaan lisätä tai poistaa pelaajia.
 
 - [x] Pelaajat voivat lisätä tuloksia tuloskorttiin
-- [ ] Pelin voittajan määrittäminen toimii
-- [ ] Peli tarjoaa mahdollisuuden palata alkuun
+- [x] Pelin voittajan määrittäminen toimii
+- [x] Peli tarjoaa mahdollisuuden palata alkuun
 
 
 ## Ideoita jatkokehitykseen

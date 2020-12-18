@@ -6,6 +6,10 @@ Ohjelma käynnistyy komennolla
 ```
 java -jar yatzyproject.jar
 ```
+Suoritettavan jarin generointi onnistuu menemällä kansioon `yatzyproject` ja suorittamalla komennon
+```
+mvn package
+```
 
 ## Pelaajien lisääminen
 
@@ -34,5 +38,5 @@ Pelaajaa vaihdetaan painamalla "Next player" nappulaa. Tämä onnistuu vasta sit
 
 ### Pelin loppuminen
 
-Peli loppuu kun kaikki pelaajat ovat täyttäneet tuloskorttinsa. Näkymä siirtyy ikkunaan missä pelaajat on lueteltu korkeimman arvon saaneesta huonoimpaan.
-Voittaja on siis se joka löytyy listasta ensimmäisenä.
+Peli loppuu kun kaikki pelaajat ovat täyttäneet tuloskorttinsa. Näkymä siirtyy ikkunaan missä pelaajat on lueteltu heidän saavuttamiensa pisteiden kanssa.
+Pelin voi aloittaa uudestaan painamalla nappulaa `Restart game`, joka siirtää näkymän takaisin pelaajien luomiseen tarkoitettuun näkymään. Aikaisemmat tiedot pelaajista pyyhitään samalla.
