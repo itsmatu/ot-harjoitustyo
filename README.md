@@ -44,7 +44,7 @@ mvn package
 
 [Tuntikirjanpito](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-[Arkkitehtuurikuvaus](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuurikuvaus.md)
+[Arkkitehtuurikuvaus](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 # Releaset
 
