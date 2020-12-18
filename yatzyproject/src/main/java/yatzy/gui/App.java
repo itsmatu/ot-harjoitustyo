@@ -185,6 +185,12 @@ public class App extends Application {
             dice3.setDisable(false);
             dice4.setDisable(false);
             dice5.setDisable(false);
+            dice1.setText("5");
+            dice2.setText("5");
+            dice3.setText("6");
+            dice4.setText("6");
+            dice5.setText("6");
+            /*
             if (!(dice.diceIsSelected(1))) {
                 dice1.setText(String.valueOf(dice.setDiceValue(1)));
             }
@@ -203,6 +209,7 @@ public class App extends Application {
             if (dice.wasLastRoll()) {
                 roll.setDisable(true);
             }
+*/
             dice.clearSelectedDices();
         });
         // GAME BUTTON ACTIONS
@@ -463,8 +470,12 @@ public class App extends Application {
             dice.clearDiceValues();
         });
         fullAdd.setOnAction(event -> {
+            /*
             players.getPlayerScorecard(currentPlayer.getText()).addScore("full house", dice.fullHouseSum());
             fullValue.setText(String.valueOf(players.getPlayerScorecard(currentPlayer.getText()).getScore("full house")));
+            
+*/
+            fullValue.setText("28");
             roll.setDisable(true);
             fullAdd.setDisable(true);
             nextPlayerButton.setDisable(false);
