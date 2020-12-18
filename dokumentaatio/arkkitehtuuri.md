@@ -71,3 +71,5 @@ Tapahtuma etenee näin:
 
 
 <img src="https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/cantaddfullhouse.png">
+
+---
