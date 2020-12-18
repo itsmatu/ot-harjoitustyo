@@ -14,4 +14,9 @@
 
 14.12.2020 - 7 tuntia (Lisäsin sovellukseen uuden näkymän pelin päättymiselle ja korjasin sovelluksessa olleita bugeja.)
 
-Yhteensä 47 tuntia käytetty.
+15.12.2020 - 8 tuntia (Aloitin tekemään arkkitehtuurikuvausta. Täydensin testiluokkia.)
+
+18.12.2020 - 6 tuntia (Parantelin arkkitehtuurikuvausta, sekä muita dokumentaatioon liittyviä tiedostoja. Julkaisin loppulisen version sovelluksesta.)
+
+
+Yhteensä 61 tuntia käytetty.

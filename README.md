@@ -49,3 +49,5 @@ mvn package
 # Releaset
 
 [Viikko 5](https://github.com/matiasonnelainen/ot-harjoitustyo/releases/tag/viikko5)
+
+[Loppupalautus](https://github.com/matiasonnelainen/ot-harjoitustyo/releases/tag/Loppupalautus)
