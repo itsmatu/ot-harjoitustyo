@@ -4,7 +4,7 @@
 Ohjelma on jaettu kahteen erilliseen pakettiin. yatzy.applogic sisältää kolme eri luokkaa, jotka muodostavat suurimman osan sovelluksen toiminnasta.`yazty.gui` sisältää käyttöliittymän rakentavan luokan `App.java`, sekä sovelluksen käynnistävän `Main.java`-luokan.
 
 
-<img src="https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pakkausrakenne1.png">
+<img src="https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pakkausrakenne.png">
 
 ## Sovelluksen käyttöliittymä
 
