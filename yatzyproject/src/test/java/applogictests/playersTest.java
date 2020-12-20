@@ -88,4 +88,12 @@ public class playersTest {
         player.nextPlayer();
         assertEquals(player.getCurrentPlayer(), "c");
     }
+    
+    @Test
+    public void clearingPlayersWorks() {
+        player.addPlayer("a");
+        assertEquals(player.getPlayerCount(), 1);
+        player.clearPlayers();
+        assertEquals(player.getPlayerCount(), 0);
+    }
 }

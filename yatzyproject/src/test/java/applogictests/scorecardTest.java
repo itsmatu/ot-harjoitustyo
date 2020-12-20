@@ -60,4 +60,39 @@ public class scorecardTest {
         score.addScore("fours", 16);
         assertEquals(score.getScoreSum(), 72);
     }
+    
+    @Test
+    public void bonusIsAwardedCorrectly() {
+        score.addScore("ones", 3);
+        score.addScore("twos", 6);
+        score.addScore("threes", 9);
+        score.addScore("fours", 12);
+        score.addScore("fives", 15);
+        assertEquals(score.bonusAwarded(), false);
+        score.addScore("sixes", 18);
+        assertEquals(score.bonusAwarded(), true);
+    }
+    
+    @Test
+    public void checksIfScorecardIsFull() {
+        score.addScore("ones", 3);
+        score.addScore("twos", 6);
+        score.addScore("threes", 9);
+        score.addScore("fours", 12);
+        score.addScore("fives", 15);
+        score.addScore("sixes", 18);
+        score.addScore("pair", 10);
+        score.addScore("two pairs", 22);
+        score.addScore("three of a kind", 9);
+        score.addScore("four of a kind", 16);
+        score.addScore("small straight", 15);
+        score.addScore("large straight", 20);
+        score.addScore("full house", 28);
+        score.addScore("chance", 15);
+        assertEquals(score.scorecardIsFull(), false);
+        score.addScore("yatzy", 50);
+        assertEquals(score.scorecardIsFull(), true);
+        score.addScore("bonus", 50);
+        assertEquals(score.scorecardIsFull(), true);
+    }
 }

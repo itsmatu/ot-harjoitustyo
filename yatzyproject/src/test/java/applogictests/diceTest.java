@@ -81,6 +81,15 @@ public class diceTest {
         dice.roll();
         assertEquals(dice.wasLastRoll(), true);
     }
+    
+    @Test
+    public void endingTurnResetsIndexToZero() {
+        dice.roll();
+        dice.roll();
+        assertEquals(dice.rollCount(), 2);
+        dice.endTurn();
+        assertEquals(dice.rollCount(), 0);
+    }
 
     @Test
     public void clearDiceValuesWorks() {

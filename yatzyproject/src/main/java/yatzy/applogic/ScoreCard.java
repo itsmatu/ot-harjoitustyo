@@ -65,7 +65,7 @@ public class ScoreCard {
      * @return Returns true or false
      */
     public boolean scorecardIsFull() {
-        return this.scores.size() == 15;
+        return this.scores.size() >= 15;
     }
 
     /**
