@@ -46,6 +46,7 @@ mvn package
 
 [Arkkitehtuurikuvaus](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[Testidokumentti](https://github.com/matiasonnelainen/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 # Releaset
 
 [Viikko 5](https://github.com/matiasonnelainen/ot-harjoitustyo/releases/tag/viikko5)

@@ -18,5 +18,6 @@
 
 18.12.2020 - 6 tuntia (Parantelin arkkitehtuurikuvausta, sekä muita dokumentaatioon liittyviä tiedostoja. Julkaisin loppulisen version sovelluksesta.)
 
-
-Yhteensä 61 tuntia käytetty.
+20.12.2020 - 4 tuntia (Täydensin dokumentaatiota. Paransin testikattavuutta.)
+ 
+Yhteensä 65 tuntia käytetty.
