@@ -2,6 +2,8 @@
 
 ## Ohjelman käynnistäminen
 
+Lataa suoritettava jari [täältä](https://github.com/matiasonnelainen/ot-harjoitustyo/releases/tag/Loppupalautus)
+
 Ohjelma käynnistyy komennolla
 ```
 java -jar yatzyproject.jar
