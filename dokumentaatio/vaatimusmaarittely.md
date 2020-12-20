@@ -18,7 +18,7 @@ mahdollista poistaa.
  
 ### Pelin pelaaminen
 
-Pelin aloittaessa näkymä muuttuu. Tässä näkymässä ikkunan vasemmalla puolella näkyy kenen vuoro on pelata ja lisäksi kyseisen pelaajan saavuttamat arvot hänen tuloskortissa.
+Pelin aloittaessa näkymä muuttuu. Tässä näkymässä ikkunan vasemmalla puolella näkyy sen hetkisen pelaajan saavuttamat arvot hänen tuloskortissa.
 Ikkunan oikealla puolella on viisi noppaa vastaavaa nappulaa, joiden avulla pelaaja voi heittovuoroillaan lukita haluamiaan noppia.
 Noppien lisäksi on myös heittämiseen tarkoitettu nappula, jota painaessa lukitsemattomille nopille arvotaan satunnainen arvo 1-6 väliltä.
 
